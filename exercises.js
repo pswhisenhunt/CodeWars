@@ -46,5 +46,11 @@ module.exports = {
     return values.filter(function(val) {
       return val % 2 === 0;
     });
+  },
+
+  flattenArrays : function(arr) {
+    return arr.reduce(function(prev, curr) {
+      return prev.concat(curr);
+    });
   }
 };

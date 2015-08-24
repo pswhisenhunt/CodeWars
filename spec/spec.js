@@ -50,4 +50,10 @@ describe('Code Wars', function() {
       expect(CodeWars.evensArray([2,4,5,7,8])).toEqual([2,4,8]);
     });
   });
+
+  describe('flattenArrays()', function() {
+    it('should take an array of arrays and return a single array', function() {
+      expect(CodeWars.flattenArrays([[1,2],[3,4],[5,6]])).toEqual([1,2,3,4,5,6]);
+    });
+  });
 });
