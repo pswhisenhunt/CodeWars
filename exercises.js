@@ -7,5 +7,9 @@ module.exports = {
         return CHAR_TO_MORSE[char];
       }).join(' ');
     }).join('   ');
+  },
+
+  timmysRegex : function(sentence) {
+    return sentence.replace(/bad|mean|ugly|hideous|horrible/gi, 'awesome');
   }
 };
