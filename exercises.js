@@ -40,5 +40,11 @@ module.exports = {
     else {
       return null;
     }
+  },
+
+  evensArray : function(values) {
+    return values.filter(function(val) {
+      return val % 2 === 0;
+    });
   }
 };

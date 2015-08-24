@@ -44,4 +44,10 @@ describe('Code Wars', function() {
       expect(CodeWars.factorial(5)).toEqual(120);
     });
   });
+
+  describe('evensArray()', function() {
+    it('should return a new array with only the even number', function() {
+      expect(CodeWars.evensArray([2,4,5,7,8])).toEqual([2,4,8]);
+    });
+  });
 });
