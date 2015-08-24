@@ -11,5 +11,11 @@ module.exports = {
 
   timmysRegex : function(sentence) {
     return sentence.replace(/bad|mean|ugly|hideous|horrible/gi, 'awesome');
+  },
+
+  isDivisble : function(n) {
+    return Array.prototype.slice.call(arguments).every(function(value) {
+        return !(n % value);
+    });
   }
 };
