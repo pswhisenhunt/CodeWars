@@ -28,4 +28,11 @@ describe('Code Wars', function() {
       expect(CodeWars.one([1,2,3,4,5],function(item) {return item % 2})).toEqual(false);
     });
   });
+
+  describe('gradualIncreaseSum()', function() {
+    it('should return the accumulatd sum of each value passed into the function times it\'s index, starting at 1', function() {
+      expect(CodeWars.gradualIncreaseSum(100,200,300)).toEqual(1400);
+      expect(CodeWars.gradualIncreaseSum()).toEqual(0);
+    });
+  });
 });

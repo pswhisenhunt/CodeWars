@@ -21,5 +21,15 @@ module.exports = {
 
   one : function(arr, func) {
     return arr.filter(func).length === 1;
+  },
+
+  gradualIncreaseSum: function() {
+    var args = [].slice.call(arguments);
+    if (args.length === 0) { return 0 };
+    var sum = 0;
+    args.forEach(function(number, index) {
+      sum += number * (index + 1);
+    });
+    return sum;
   }
 };
