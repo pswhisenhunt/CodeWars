@@ -21,4 +21,11 @@ describe('Code Wars', function() {
       expect(CodeWars.isDivisble(3,3,4)).toEqual(false);
     });
   });
+
+  describe('one()', function() {
+    it('should accept an array and a function. The function should return true is exactly one item in the array is true', function() {
+      expect(CodeWars.one([1,2,3,4,5], function(item) { return item < 2})).toEqual(true);
+      expect(CodeWars.one([1,2,3,4,5],function(item) {return item % 2})).toEqual(false);
+    });
+  });
 });

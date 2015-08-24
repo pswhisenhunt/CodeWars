@@ -17,5 +17,9 @@ module.exports = {
     return Array.prototype.slice.call(arguments).every(function(value) {
         return !(n % value);
     });
+  },
+
+  one : function(arr, func) {
+    return arr.filter(func).length === 1;
   }
 };
