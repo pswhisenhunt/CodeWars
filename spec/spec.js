@@ -35,4 +35,13 @@ describe('Code Wars', function() {
       expect(CodeWars.gradualIncreaseSum()).toEqual(0);
     });
   });
+
+  describe('factorial', function() {
+    it('should return the factorial value of the number passed in, or 1 it 0 is passed in or null if given a negative value', function() {
+      expect(CodeWars.factorial(0)).toEqual(1);
+      expect(CodeWars.factorial()).toEqual(null);
+      expect(CodeWars.factorial(-3)).toEqual(null);
+      expect(CodeWars.factorial(5)).toEqual(120);
+    });
+  });
 });

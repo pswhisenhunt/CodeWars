@@ -23,7 +23,7 @@ module.exports = {
     return arr.filter(func).length === 1;
   },
 
-  gradualIncreaseSum: function() {
+  gradualIncreaseSum : function() {
     var args = [].slice.call(arguments);
     if (args.length === 0) { return 0 };
     var sum = 0;
@@ -31,5 +31,14 @@ module.exports = {
       sum += number * (index + 1);
     });
     return sum;
+  },
+
+  factorial : function(n) {
+    if (n > -1) {
+      return n === 0 ? 1 : n * this.factorial(n - 1);
+    }
+    else {
+      return null;
+    }
   }
 };
