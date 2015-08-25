@@ -55,15 +55,15 @@ module.exports = {
   },
 
   phonePad : {
-    0: [' '],
-    2: ['A', 'B', 'C'],
-    3: ['D','E', 'F'],
-    4: ['G', 'H', 'I'],
-    5: ['J', 'K', 'L'],
-    6: ['M', 'N', 'O'],
-    7: ['P', 'Q','R','S'],
-    8: ['T', 'U', 'V'],
-    9: ['W', 'X', 'Y', 'Z']
+    0: [0, ' '],
+    2: [2, 'A', 'B', 'C'],
+    3: [3, 'D','E', 'F'],
+    4: [4, 'G', 'H', 'I'],
+    5: [5, 'J', 'K', 'L'],
+    6: [6, 'M', 'N', 'O'],
+    7: [7, 'P', 'Q','R','S'],
+    8: [8, 'T', 'U', 'V'],
+    9: [9, 'W', 'X', 'Y', 'Z']
   },
 
   presses : function(phrase) {
@@ -73,7 +73,7 @@ module.exports = {
     for (key in phonePad) {
       for (var i = 0; i < phrase.length; i++) {
         if (phonePad[key].indexOf(phrase[i]) > -1) {
-          totalPresses += (phonePad[key].indexOf(phrase[i]) + 1);
+          totalPresses += (phonePad[key].indexOf(phrase[i]));
         }
         else {
           totalPresses += 0;

@@ -61,6 +61,7 @@ describe('Code Wars', function() {
     it('should take a string of text and return the number of keypresses it takes to create that string on a traditional telephone pad', function() {
       expect(CodeWars.presses('LOL')).toEqual(9);
       expect(CodeWars.presses('HOW R U')).toEqual(13);
+      expect(CodeWars.presses('B4 2MORROW')).toEqual(17);
     });
   });
 });
