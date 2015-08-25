@@ -81,5 +81,14 @@ module.exports = {
       }
     };
     return totalPresses;
+  },
+
+  createPhoneNumber : function(arr) {
+    var areaCode = arr.splice(0, 3);
+    areaCode.splice(0, 0, '(');
+    areaCode.splice(areaCode.length, 0, ')');
+    areaCode = areaCode.join('');
+    arr.splice(3, 0, '-');
+    return areaCode + arr.join('');
   }
 };
