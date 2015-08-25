@@ -56,4 +56,11 @@ describe('Code Wars', function() {
       expect(CodeWars.flattenArrays([[1,2],[3,4],[5,6]])).toEqual([1,2,3,4,5,6]);
     });
   });
+
+  describe('presses()', function() {
+    it('should take a string of text and return the number of keypresses it takes to create that string on a traditional telephone pad', function() {
+      expect(CodeWars.presses('LOL')).toEqual(9);
+      expect(CodeWars.presses('HOW R U')).toEqual(13);
+    });
+  });
 });

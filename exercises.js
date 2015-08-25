@@ -52,5 +52,34 @@ module.exports = {
     return arr.reduce(function(prev, curr) {
       return prev.concat(curr);
     });
+  },
+
+  phonePad : {
+    0: [' '],
+    2: ['A', 'B', 'C'],
+    3: ['D','E', 'F'],
+    4: ['G', 'H', 'I'],
+    5: ['J', 'K', 'L'],
+    6: ['M', 'N', 'O'],
+    7: ['P', 'Q','R','S'],
+    8: ['T', 'U', 'V'],
+    9: ['W', 'X', 'Y', 'Z']
+  },
+
+  presses : function(phrase) {
+    var totalPresses = 0;
+    phonePad = this.phonePad;
+    phrase = phrase.split('');
+    for (key in phonePad) {
+      for (var i = 0; i < phrase.length; i++) {
+        if (phonePad[key].indexOf(phrase[i]) > -1) {
+          totalPresses += (phonePad[key].indexOf(phrase[i]) + 1);
+        }
+        else {
+          totalPresses += 0;
+        }
+      }
+    };
+    return totalPresses;
   }
 };
